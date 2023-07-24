@@ -12,6 +12,10 @@ numberBtn.forEach(button => {
     button.addEventListener('click', () => display.addNumber(button.innerHTML));
 });
 
+operator.forEach(button => {
+    button.addEventListener('click', () => display.compute(button.value));
+});
+
 backSp.addEventListener('click', () => display.delete());
 deleteAll.addEventListener('click', () => display.deleteAll());
 

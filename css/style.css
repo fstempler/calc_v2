@@ -1,37 +1,70 @@
 * {
-  color: #ffffff; }
+  color: #ffffff;   
+}
+
 
 body {
-  margin: 0;
-  background-color: #224870; }
+  margin: 0;  
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;	  
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; }
+  height: 100vh; 
+  flex-direction: column;
+}
+
+  .title h3{
+    font-size: 2em;
+    font-family: 'Gugi', cursive;  
+    color: #ffffff73;  
+  }  
 
 .calculator {
   display: grid;
   grid-template-columns: repeat(4, 75px);
   grid-template-rows: 160px repeat(5, 75px);
-  background-color: #00916e;
+  background-color: #d30cb833;  
   padding: 15px;
   border-radius: 32px;
+  border-style: solid;
+  border-color: #d30cb833;
   box-shadow: 15px 10px 0px 5px #00000033; }
 
 button {
   cursor: pointer;
   margin: 5px;
   padding: 0;
-  border-radius: 32px;
-  font-size: 1.5em;
-  border: none;
-  background-color: #00916e;
-  box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #00ffc11f; }
+  border-radius: 12px;
+  font-size: 2em;
+  border: solid;
+  border-color: #5c2c6d;
+  background-color: #6df1d8;
+  color:#3c345c;
+  box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #00ffc11f; 
+  font-family: 'VT323', monospace;
+}
 
 button:active {
-  background-color: #006f54; }
+  background-color: #5da4a6; }
 
 button:focus {
   outline: none; }
@@ -43,7 +76,7 @@ button:focus {
   margin: 10px 20px;
   flex-direction: column;
   align-items: flex-end;
-  background-color: #363636;
+  background-color: #3c345c;
   border-radius: 32px;
   text-align: right;
   justify-content: space-between;
